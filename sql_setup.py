@@ -2,14 +2,15 @@
 #pip install mysql-connector-python
 
 import mysql.connector
+import getpass
 
 # Establish connection
 conn = mysql.connector.connect(
-    host = "localhost",                          # MySQL server host (e.g., 'localhost' or IP)
-    user = "root",                               # MySQL username (e.g., 'root')
-    password = "XXXXXXXXXXXXXX",                 # My MySQL password
+    host = "localhost",                                                     # MySQL server host (e.g., 'localhost' or IP)
+    user = "root",                                                          # MySQL username (e.g., 'root')
+    password = getpass.getpass("Enter your password: "),                    # My MySQL password
     database ="scrape",
-    port = 3306                                  # MY database name
+    port = 3306                                                             # MY database name
 )
 print("Connected to MySQL successfully!")
 
@@ -27,7 +28,7 @@ CREATE TABLE IF NOT EXISTS google_news (
 );
 ''')
 # "headline VARCHAR(255) NOT NULL UNIQUE"
-#this handel the de-duplication constraint, based on headline,but that’s not the best.
+# This handel the de-duplication constraint,(as mention in Q.5) based on headline,but that’s not the best.
 conn.commit()
 
 def insert_news(thumbnail_data, thumbnail_url, headline, headline_url, scrape_timestamp, article_date):    
