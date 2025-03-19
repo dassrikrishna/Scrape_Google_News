@@ -31,6 +31,5 @@ def scrape(driver):
 # Call the scraping function
 scrape(driver)
 
-print()
 # Close the driver
 driver.quit()
