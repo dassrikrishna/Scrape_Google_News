@@ -1,0 +1,24 @@
+Steps:
+Open Task Scheduler
+
+Press Win + R, type taskschd.msc, and press Enter.
+Create a New Task
+
+Click "Create Basic Task" from the right panel.
+Enter a name and description, then click Next.
+Choose Trigger (When to Start the Task)
+
+Select "Daily", then click Next.
+Set the start date and time for when you want the task to begin.
+Set Recurrence to Every 5 Minutes
+
+In the "Advanced settings" section:
+Check "Repeat task every" and set it to 5 minutes.
+Set "for a duration of" to 30 minutes.
+Choose Action (What the Task Will Do)
+
+Select "Start a Program", then click Next.
+Browse and select the script or program you want to run.
+Finish and Save
+
+Click Finish, and your task is scheduled.
